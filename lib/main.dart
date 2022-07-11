@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Future Demo',
+      title: 'Future Future',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -31,7 +31,7 @@ class FuturePage extends StatefulWidget {
 
 
 class _FuturePageState extends State<FuturePage> {
-  String? result;
+  String result = '';
 
   @override
   Widget build(BuildContext context) {
@@ -67,8 +67,8 @@ class _FuturePageState extends State<FuturePage> {
   }
 
   Future<Response> getData() async {
-    const String authority = 'www.googleapis.com';
-    const String path = '/books/v1/volumes/junbDwAAQBAJ';
+    const String? authority = 'www.googleapis.com';
+    const String? path = '/books/v1/volumes/junbDwAAQBAJ';
     Uri url = Uri.http(authority, path);
     return http.get(url);
   }
