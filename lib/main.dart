@@ -3,6 +3,7 @@ import 'package:async/async.dart';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_future/geo_location.dart';
+import 'package:flutter_future/navigation_first.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: FuturePage(),
+      home: NavigationFirst(),
     );
   }
 }
