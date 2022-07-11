@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LocationScreen(),
+      home: FuturePage(),
     );
   }
 }
@@ -31,7 +31,7 @@ class FuturePage extends StatefulWidget {
 
 
 class _FuturePageState extends State<FuturePage> {
-  String result = '';
+
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class _FuturePageState extends State<FuturePage> {
           ElevatedButton(
             child: Text('GO!'),
             onPressed: () {
-            handleError();
+            returnFG();
             },
           ),
           Spacer(),
@@ -58,6 +58,7 @@ class _FuturePageState extends State<FuturePage> {
     );
   }
 
+  String? result;
   late Completer completer;
 
   Future getNumber() {
